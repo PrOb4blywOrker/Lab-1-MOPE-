@@ -1,5 +1,6 @@
 import numpy as np
 from random import uniform
+import time
 M, m = 0, 20
 a0, a1, a2, a3 = 10, 20, 2, 35
 X = np.empty((8, 3), dtype=float)
@@ -26,6 +27,8 @@ for i in range(8):
         dY = Y[i] - Y_et
         number = i
 Y2 = a0 + a1 * X[number, 0] + a2 * X[number, 1] + a3 * X[number, 2]
+start_time = time.process_time()
+print("--- %s seconds ---" % (start_time))
 print("X:\n", X)
 print("Y:\n", Y)
 print("X0: \n", X0)
